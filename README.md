@@ -1,90 +1,191 @@
 # 🚗 Mini Reverse Parking Sensor
 
-> **A custom ATmega328P-based Reverse Parking Sensor designed with the Arduino Framework, PlatformIO, KiCad, and Wokwi Simulation.**
+> **A custom ATmega328P-based Reverse Parking Sensor designed using PlatformIO, the Arduino Framework, KiCad, and Wokwi Simulation.**
 
 <p align="center">
-  <img src="images/pcb_3d_front(1).png" width="700">
+  <img src="Images/pcb_3d_front.png" width="700">
 </p>
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Overview
 
-This project is a complete embedded systems design that combines firmware development, PCB design, and simulation into a single automotive application.
+The **Mini Reverse Parking Sensor** is an embedded systems project designed to assist drivers during reverse parking by detecting nearby obstacles using an HC-SR04 ultrasonic sensor.
 
-The system measures the distance between a vehicle and nearby obstacles using an HC-SR04 ultrasonic sensor. As an object gets closer, LEDs provide visual feedback while a buzzer gives audible warnings, helping the driver park safely.
+The system continuously measures the distance between the vehicle and obstacles, providing both **visual feedback** through LEDs and **audible warnings** using a buzzer. The project demonstrates the complete embedded systems development workflow, including firmware development, schematic capture, PCB design, simulation, and manufacturing preparation.
 
-Unlike a simple breadboard prototype, this project includes a fully custom-designed PCB developed in KiCad and firmware written using the Arduino Framework with PlatformIO.---
+---
 
-## ✨ Features
+# ✨ Features
 
-- 📏 Real-time obstacle distance measurement using the **HC-SR04 Ultrasonic Sensor**
+- 📏 Real-time obstacle distance measurement
 - 🚦 Multi-level LED distance indication
-- 🔊 Audible warning using a piezo buzzer
-- 🧠 ATmega328P microcontroller-based control system
-- 💻 Firmware developed using **PlatformIO** with the **Arduino Framework**
-- 📐 Custom PCB designed in **KiCad 10**
-- 🧪 Fully simulated using **Wokwi**
-- 🏭 Manufacturing-ready Gerber files included---
+- 🔊 Audible buzzer warning
+- 🧠 ATmega328P microcontroller
+- 💻 Firmware developed with PlatformIO
+- 📐 Custom PCB designed in KiCad
+- 🧪 Wokwi online simulation
+- 🏭 Manufacturing-ready Gerber files
 
-## 🔧 Hardware Components
+---
+
+# 🔧 Hardware Components
 
 | Component | Description |
 |-----------|-------------|
 | ATmega328P | Main Microcontroller |
 | HC-SR04 | Ultrasonic Distance Sensor |
-| LEDs | Distance Level Indicators |
-| Piezo Buzzer | Audible Warning Output |
-| AVR ISP Header | Microcontroller Programming |
+| LEDs | Distance Indicators |
+| Piezo Buzzer | Audible Warning |
+| AVR ISP Header | Programming Interface |
 | UART Header | Serial Communication |
 | Capacitors | Power Supply Filtering |
-| Resistors | Current Limiting & Biasing |---
+| Resistors | Current Limiting |
 
-## 🛠 Software & Tools
+---
 
-- **Visual Studio Code**
-- **PlatformIO**
-- **Arduino Framework**
-- **KiCad 10**
-- **Wokwi Simulator**
-- **Git & GitHub**---
+# 🛠 Software & Tools
+
+- Visual Studio Code
+- PlatformIO
+- Arduino Framework
+- KiCad 10
+- Wokwi Simulator
+- Git & GitHub
+
+---
 
 # 📷 Project Gallery
 
 ## 🔹 Schematic
 
-<p align="center">
-  <img src="images/schematic.png" width="900">
-</p>
+![Schematic](Images/schematic.png)
 
 ---
 
 ## 🔹 PCB Layout
 
-<p align="center">
-  <img src="images/pcb_layout(1).png" width="900">
-</p>
+![PCB Layout](Images/pcb_layout.png)
 
 ---
 
 ## 🔹 PCB 3D View (Front)
 
-<p align="center">
-  <img src="images/pcb_3d_front(1).png" width="700">
-</p>
+![PCB Front](Images/pcb_3d_front.png)
 
 ---
 
 ## 🔹 PCB 3D View (Back)
 
-<p align="center">
-  <img src="images/pcb_3d_back.png" width="700">
-</p>
+![PCB Back](Images/pcb_3d_back.png)
 
 ---
 
 ## 🔹 Wokwi Simulation
 
-<p align="center">
-  <img src="images/wokwi_simulation.png" width="900">
-</p>
+![Wokwi Simulation](Images/wokwi_simulation.png)
+
+---
+
+# ▶️ Live Wokwi Simulation
+
+You can run the complete project online using Wokwi.
+
+🔗 **Project Link**
+
+https://wokwi.com/projects/470446346962711553
+
+The simulation allows you to:
+
+- Inspect the wiring
+- Execute the firmware
+- Observe LED responses
+- Observe buzzer behaviour
+- Understand the complete system before hardware fabrication
+
+---
+
+# 📁 Repository Structure
+
+```text
+Mini-Reverse-Parking-Sensor/
+│
+├── src/
+├── include/
+├── platformio.ini
+│
+├── hardware/
+│   ├── KiCad_Project/
+│   └── Gerbers/
+│
+├── Simulation/
+│   └── README.md
+│
+├── Images/
+│   ├── schematic.png
+│   ├── pcb_layout.png
+│   ├── pcb_3d_front.png
+│   ├── pcb_3d_back.png
+│   └── wokwi_simulation.png
+│
+└── README.md
+```
+
+---
+
+# 🏭 PCB Manufacturing
+
+The PCB was designed using **KiCad 10**.
+
+Production-ready Gerber files are available in:
+
+```text
+hardware/Gerbers/
+```
+
+These files can be uploaded directly to PCB manufacturers such as:
+
+- JLCPCB
+- PCBWay
+- Seeed Studio Fusion
+- OSH Park
+
+---
+
+# 🚀 Future Improvements
+
+Future versions of this project may include:
+
+- OLED display for live distance visualization
+- PWM-controlled buzzer
+- Waterproof ultrasonic sensor
+- Automotive-grade voltage protection
+- Surface-mount PCB version
+- Low-power sleep mode
+- Automatic activation through reverse gear detection
+
+---
+
+# 👨‍💻 Author
+
+**Akinkunmi Akindolapo**
+
+- B.Sc. Physics
+- NCE Automobile Technology
+- Embedded Systems Enthusiast
+- PCB Designer
+- Robotics & Automotive Electronics
+
+GitHub:
+
+https://github.com/Akinlatauto19
+
+---
+
+# ⭐ Acknowledgements
+
+This project was developed as part of my continuous learning journey in **Embedded Systems**, **PCB Design**, and **Automotive Electronics**.
+
+---
+
+> *"Every great embedded system starts with an idea, a schematic, and the determination to keep improving."*
